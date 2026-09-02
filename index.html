@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inti Bar — Energía Ancestral para la Generación del Futuro | Snack Funcional</title>
+    <meta name="description" content="La barra funcional peruana que revoluciona los recreos. Harina de plátano verde, jalea de aguaymanto y kiwicha pop. Sinergia activa de hierro y vitamina C, 100% sin octógonos.">
+    
+    <!-- Google Fonts: Outfit (Titulares potentes) + Plus Jakarta Sans (Lectura fluida y moderna) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#f59e0b',
+                            amber: '#d97706',
+                            orange: '#ea580c',
+                            sun: '#fbbf24',
+                            cream: '#fef3c7',
+                            sand: '#fffbeb',
+                            teal: '#0d9488',
+                            tealLight: '#14b8a6',
+                            earth: '#78350f',
+                            dark: '#14110f',
+                            cardDark: '#1e1a17',
+                            borderDark: '#322b25'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-gold {
+            background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+        }
+        .gradient-teal {
+            background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+        }
+        .gradient-glow {
+            background: radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.18), transparent 55%),
+                        radial-gradient(circle at 80% 80%, rgba(13, 148, 136, 0.12), transparent 50%),
+                        #14110f;
+        }
+        .glass-panel {
+            background: rgba(30, 26, 23, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(0.5deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .img-zoom {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-zoom:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-stone-100 font-sans antialiased selection:bg-brand-gold selection:text-brand-dark">
+
+    <!-- ANNOUNCEMENT BANNER -->
+    <aside aria-label="Anuncio oficial" class="bg-gradient-to-r from-brand-amber via-brand-orange to-brand-gold text-brand-dark font-extrabold text-xs py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+        <span class="bg-brand-dark text-brand-sun text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-mono">Crea y Emprende 2026</span>
+        <span>🏆 Proyecto Representante COAR Amazonas • ¡Lote Piloto Validado con 92% de Aceptación!</span>
+    </aside>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-borderDark">
+        <nav aria-label="Navegación principal" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-2xl gradient-gold flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+                        <i data-lucide="sun" class="w-6 h-6 text-brand-dark stroke-[2.5]"></i>
+                    </div>
+                    <div>
+                        <span class="font-display font-black text-2xl tracking-tight text-white flex items-center gap-1">
+                            INTI<span class="text-brand-gold">BAR</span>
+                        </span>
+                        <p class="text-[10px] text-amber-200/70 uppercase tracking-widest font-mono font-semibold">Energía Ancestral</p>
+                    </div>
+                </a>
+                
+                <!-- Nav Links (Desktop) -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-stone-300">
+                    <a href="#sensorial" class="hover:text-brand-gold transition-colors">La Barra & Textura</a>
+                    <a href="#transparencia" class="hover:text-brand-gold transition-colors">Ingredientes Reales</a>
+                    <a href="#comparativa" class="hover:text-brand-gold transition-colors">¿Por qué Inti Bar?</a>
+                    <a href="#nutricion" class="hover:text-brand-gold transition-colors">Ficha Técnica</a>
+                    <a href="#store-locator" class="hover:text-brand-gold transition-colors">Puntos de Venta</a>
+                    <a href="#reviews" class="hover:text-brand-gold transition-colors">Opiniones (4.8★)</a>
+                </div>
+
+                <!-- Action Button -->
+                <div class="flex items-center gap-3">
+                    <a href="#comprar" class="gradient-gold text-brand-dark font-display font-extrabold text-sm px-5 py-2.5 rounded-full flex items-center gap-2 shadow-lg shadow-amber-500/20 hover:opacity-95 transform hover:scale-105 transition-all">
+                        <i data-lucide="shopping-bag" class="w-4 h-4 stroke-[2.5]"></i>
+                        <span>Pedir Pack (S/ 2.50)</span>
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- 1. HERO SECTION (APPETITE APPEAL, FOTOGRAFÍA PROTAGÓNICA & UVP) -->
+    <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 gradient-glow overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left: Copywriting & Value Proposition -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-brand-sun text-xs font-bold tracking-wide">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i>
+                        <span>La Nueva Generación de Snacks Escolares</span>
+                    </div>
+
+                    <h1 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.05]">
+                        Sin octógonos.<br>
+                        Sin azúcar añadida.<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-brand-orange to-yellow-300">Pura Energía Real.</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-stone-300 font-normal max-w-2xl leading-relaxed">
+                        Una barra funcional de 40 g elaborada con superalimentos de Luya. La <strong class="text-brand-sun font-semibold">vitamina C del aguaymanto triplica la absorción de hierro</strong> de la kiwicha pop para vencer la fatiga escolar.
+                    </p>
+
+                    <!-- RXBAR-Style Radical Transparency Strip -->
+                    <div class="p-4 sm:p-5 rounded-2xl bg-brand-cardDark border border-brand-borderDark max-w-2xl">
+                        <p class="text-[11px] uppercase font-mono tracking-widest text-brand-gold font-bold mb-2">Transparencia Total • Clean Label:</p>
+                        <div class="flex flex-wrap items-center gap-2 text-sm sm:text-base font-display font-extrabold text-white">
+                            <span class="px-2.5 py-1 rounded-lg bg-stone-900 border border-stone-700">🍌 Plátano Verde</span>
+                            <span class="text-brand-gold">+</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-stone-900 border border-stone-700">🍊 Jalea de Aguaymanto</span>
+                            <span class="text-brand-gold">+</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-stone-900 border border-stone-700">🌾 Kiwicha Pop</span>
+                            <span class="text-brand-gold">+</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-stone-900 border border-stone-700">🍯 Miel Pura</span>
+                        </div>
+                        <p class="text-xs text-stone-400 mt-2 font-medium">Cero químicos. Cero jarabes de maíz. Cero floro.</p>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+                        <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs font-bold">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                            100% Sin Sellos Octogonales
+                        </div>
+                        <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-teal-950/60 border border-teal-500/40 text-teal-300 text-xs font-bold">
+                            <i data-lucide="flame-kindling" class="w-4 h-4 text-teal-400"></i>
+                            Tecnología &lt; 70 °C (Nutrientes Vivos)
+                        </div>
+                        <div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-amber-950/60 border border-amber-500/40 text-amber-300 text-xs font-bold">
+                            <i data-lucide="heart-handshake" class="w-4 h-4 text-amber-400"></i>
+                            Comercio Justo con Luya
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+                        <a href="#comprar" class="gradient-gold text-brand-dark font-display font-extrabold px-8 py-4 rounded-2xl flex items-center justify-center gap-3 shadow-2xl shadow-amber-500/25 hover:opacity-95 transform hover:-translate-y-1 transition-all text-base">
+                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            <span>Pedir Ahora a S/ 2.50</span>
+                        </a>
+                        <a href="#store-locator" class="px-7 py-4 rounded-2xl bg-stone-900/90 hover:bg-stone-800 text-white font-semibold border border-stone-700 flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
+                            <span>Puntos de Venta Físicos</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right: High-Resolution Food Photography Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md rounded-3xl p-4 sm:p-6 glass-panel shadow-2xl shadow-amber-500/15 animate-float">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -top-3.5 -right-2 z-20 px-4 py-1.5 rounded-full gradient-gold text-brand-dark font-display font-black text-xs uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                            Barra Funcional 40g
+                        </div>
+
+                        <!-- Real Macro Photography Container (Appetite Appeal) -->
+                        <div class="relative rounded-2xl overflow-hidden border border-brand-borderDark group">
+                            <!-- Hero Food Image -->
+                            <img id="mainProductImg" 
+                                 src="https://i.imgur.com/iNyOAZR.jpg" 
+                                 alt="Inti Bar - Barra funcional de superalimentos con aguaymanto y kiwicha pop" 
+                                 class="w-full h-72 object-cover img-zoom">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80"></div>
+                            
+                            <!-- Overlay Content on Image -->
+                            <div class="absolute bottom-4 left-4 right-4 z-10">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <span class="font-display font-black text-2xl tracking-wide text-white drop-shadow-md">INTI BAR</span>
+                                        <p class="text-xs text-brand-sun font-semibold">Aguaymanto • Plátano Verde • Kiwicha</p>
+                                    </div>
+                                    <span class="px-3 py-1 rounded-xl bg-brand-dark/90 backdrop-blur-md border border-brand-gold/40 text-brand-gold font-mono font-extrabold text-sm shadow-md">
+                                        S/ 2.50
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sensory Highlights Quick Metrics -->
+                        <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+                            <div class="p-2.5 rounded-2xl bg-stone-900/80 border border-stone-800">
+                                <p class="font-display font-bold text-base text-brand-gold">148 kcal</p>
+                                <p class="text-[10px] text-stone-400">Energía Limpia</p>
+                            </div>
+                            <div class="p-2.5 rounded-2xl bg-stone-900/80 border border-stone-800">
+                                <p class="font-display font-bold text-base text-teal-400">45 mg</p>
+                                <p class="text-[10px] text-stone-400">Vitamina C (75%)</p>
+                            </div>
+                            <div class="p-2.5 rounded-2xl bg-stone-900/80 border border-stone-800">
+                                <p class="font-display font-bold text-base text-orange-400">3.2 mg</p>
+                                <p class="text-[10px] text-stone-400">Hierro Vegetal</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. FOCO SENSORIAL & FOTOGRAFÍA DE INGREDIENTES (KIND / GRAZA STYLE) -->
+    <section id="sensorial" class="py-24 bg-stone-900/40 border-y border-brand-borderDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-gold text-xs font-extrabold tracking-widest uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20 font-mono">
+                    Ingredientes que Puedes Ver y Sentir
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-5xl text-white">
+                    El Placer del Sabor Natural
+                </h2>
+                <p class="text-stone-400 text-base">
+                    Equilibramos la textura crujiente de los granos andinos con la frescura cítrica de la fruta fresca de la selva alta y la dulzura noble de la miel pura.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Ingredient 1: Kiwicha Pop -->
+                <div class="rounded-3xl overflow-hidden bg-brand-cardDark border border-brand-borderDark hover:border-brand-gold/50 transition-all group flex flex-col justify-between">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://i.imgur.com/hOq1Im2.jpg" 
+                             alt="Kiwicha pop tostada crujiente" 
+                             class="w-full h-full object-cover img-zoom">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-cardDark via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-brand-dark/80 backdrop-blur-md text-brand-gold text-xs font-bold border border-amber-500/30">
+                            🌾 Kiwicha Pop
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-display font-bold text-xl text-white">1. El Toque Crunch</h3>
+                        <p class="text-xs text-brand-gold font-mono uppercase font-bold">Corteza Tostada & Hierro Vegetal</p>
+                        <p class="text-sm text-stone-300 leading-relaxed">
+                            Granos andinos expandidos a temperatura exacta para crear una textura crujiente y ligera que aporta 3.2 mg de hierro no hemo por barra.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ingredient 2: Aguaymanto -->
+                <div class="rounded-3xl overflow-hidden bg-brand-cardDark border border-brand-borderDark hover:border-orange-500/50 transition-all group flex flex-col justify-between">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://i.imgur.com/ODQGk9e.jpg" 
+                             alt="Aguaymanto fresco de Luya Amazonas" 
+                             class="w-full h-full object-cover img-zoom">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-cardDark via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-brand-dark/80 backdrop-blur-md text-orange-400 text-xs font-bold border border-orange-500/30">
+                            🍊 Aguaymanto de Luya
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-display font-bold text-xl text-white">2. Contraste Cítrico</h3>
+                        <p class="text-xs text-orange-400 font-mono uppercase font-bold">Vitamina C (45 mg) & Antioxidantes</p>
+                        <p class="text-sm text-stone-300 leading-relaxed">
+                            Jalea artesanal con acidez vibrante que activa la biodisponibilidad del hierro y aporta el 75% del requerimiento diario de vitamina C.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ingredient 3: Plátano Verde -->
+                <div class="rounded-3xl overflow-hidden bg-brand-cardDark border border-brand-borderDark hover:border-teal-500/50 transition-all group flex flex-col justify-between">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=600&q=80" 
+                             alt="Harina de plátano verde energía sostenida" 
+                             class="w-full h-full object-cover img-zoom">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-cardDark via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-brand-dark/80 backdrop-blur-md text-teal-400 text-xs font-bold border border-teal-500/30">
+                            🍌 Plátano Verde
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-display font-bold text-xl text-white">3. Saciedad Prolongada</h3>
+                        <p class="text-xs text-teal-400 font-mono uppercase font-bold">Almidón Resistente & Energía Lenta</p>
+                        <p class="text-sm text-stone-300 leading-relaxed">
+                            Carbohidratos complejos que nutren la flora intestinal y evitan el 'crash' de azúcar, manteniendo la concentración escolar por más de 4 horas.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. COMPARATIVA DIRECTA (MAGIC SPOON STYLE) -->
+    <section id="comparativa" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-gold text-xs font-extrabold tracking-widest uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20 font-mono">
+                    Comparación Directa
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-5xl text-white">
+                    ¿Por qué elegir Inti Bar?
+                </h2>
+                <p class="text-stone-400 text-base">
+                    Comparamos la propuesta de Inti Bar contra las opciones tradicionales del quiosco y los snacks importados.
+                </p>
+            </div>
+
+            <!-- Comparison Matrix Table -->
+            <div class="overflow-hidden rounded-3xl border border-brand-borderDark bg-brand-cardDark shadow-2xl max-w-5xl mx-auto">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-stone-300">
+                        <thead class="bg-stone-900 border-b border-brand-borderDark">
+                            <tr>
+                                <th class="py-5 px-6 font-display font-extrabold text-base text-stone-400">Atributo</th>
+                                <th class="py-5 px-6 font-display font-black text-lg text-brand-gold bg-amber-500/10 border-x border-amber-500/20 text-center">
+                                    ☀️ INTI BAR (40g)
+                                </th>
+                                <th class="py-5 px-6 font-display font-semibold text-stone-400 text-center">Barra Industrial de Quiosco</th>
+                                <th class="py-5 px-6 font-display font-semibold text-stone-400 text-center">Barra 'Fit' Importada</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-brand-borderDark">
+                            <tr class="hover:bg-stone-900/40">
+                                <td class="py-4 px-6 font-bold text-white">Sellos Octogonales</td>
+                                <td class="py-4 px-6 text-center font-bold text-emerald-400 bg-amber-500/5 border-x border-amber-500/20">
+                                    ✅ 0 Octógonos (100% Limpia)
+                                </td>
+                                <td class="py-4 px-6 text-center text-red-400 font-semibold">❌ 2 a 3 Octógonos (Azúcar y Grasa)</td>
+                                <td class="py-4 px-6 text-center text-stone-400">⚠️ Suele tener edulcorantes artificiales</td>
+                            </tr>
+                            <tr class="hover:bg-stone-900/40">
+                                <td class="py-4 px-6 font-bold text-white">Sinergia Antianemia</td>
+                                <td class="py-4 px-6 text-center font-extrabold text-brand-sun bg-amber-500/5 border-x border-amber-500/20">
+                                    ✅ Hierro + Vitamina C (Absorción x3)
+                                </td>
+                                <td class="py-4 px-6 text-center text-stone-500">❌ Nula (Carbohidratos simples)</td>
+                                <td class="py-4 px-6 text-center text-stone-400">⚠️ Foco exclusivo en proteína aislada</td>
+                            </tr>
+                            <tr class="hover:bg-stone-900/40">
+                                <td class="py-4 px-6 font-bold text-white">Procesamiento Térmico</td>
+                                <td class="py-4 px-6 text-center font-bold text-teal-300 bg-amber-500/5 border-x border-amber-500/20">
+                                    ✅ Baja temp (&lt; 70 °C, nutrientes vivos)
+                                </td>
+                                <td class="py-4 px-6 text-center text-stone-500">❌ Horneado severo (&gt; 160 °C)</td>
+                                <td class="py-4 px-6 text-center text-stone-400">⚠️ Ultraprocesado industrial</td>
+                            </tr>
+                            <tr class="hover:bg-stone-900/40">
+                                <td class="py-4 px-6 font-bold text-white">Origen de Insumos</td>
+                                <td class="py-4 px-6 text-center font-bold text-amber-300 bg-amber-500/5 border-x border-amber-500/20">
+                                    ✅ Agricultores de Luya y Amazonas
+                                </td>
+                                <td class="py-4 px-6 text-center text-stone-500">❌ Insumos importados refinados</td>
+                                <td class="py-4 px-6 text-center text-stone-500">❌ Huella de carbono transoceánica</td>
+                            </tr>
+                            <tr class="hover:bg-stone-900/40">
+                                <td class="py-4 px-6 font-bold text-white">Precio Accesible</td>
+                                <td class="py-4 px-6 text-center font-black text-xl text-white bg-amber-500/10 border-x border-amber-500/20">
+                                    S/ 2.50
+                                </td>
+                                <td class="py-4 px-6 text-center text-stone-400 font-semibold">S/ 1.50 - S/ 2.00</td>
+                                <td class="py-4 px-6 text-center text-red-400 font-bold">S/ 4.50 - S/ 6.50 (Muy cara)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. TRANSPARENCIA RADICAL & FICHA TÉCNICA (CLEAN LABEL) -->
+    <section id="nutricion" class="py-24 bg-stone-900/50 border-t border-brand-borderDark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-teal-400 text-xs font-extrabold tracking-widest uppercase bg-teal-500/10 px-3.5 py-1 rounded-full border border-teal-500/20 font-mono">
+                    Clean Label & Ficha Nutricional
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-5xl text-white">
+                    Transparencia Nutricional (40 g)
+                </h2>
+                <p class="text-stone-400 text-base">
+                    Formulación avalada bajo requerimientos diarios del MINSA/FAO para jóvenes y escolares de 12 a 17 años.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Interactive Nutrition Table -->
+                <div class="lg:col-span-8 overflow-hidden rounded-3xl border border-brand-borderDark bg-brand-cardDark shadow-xl">
+                    <div class="p-6 bg-stone-900/80 border-b border-brand-borderDark flex items-center justify-between">
+                        <div>
+                            <h4 class="font-display font-bold text-lg text-white">Información Nutricional Oficial</h4>
+                            <p class="text-xs text-stone-400">Tamaño de porción: 1 barra individual (40 g)</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs border border-emerald-400/30">
+                            Sin Octógonos
+                        </span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm text-stone-300">
+                            <thead class="bg-stone-950 text-xs uppercase font-mono font-bold text-brand-gold border-b border-stone-800">
+                                <tr>
+                                    <th class="py-3.5 px-6">Nutriente Principal</th>
+                                    <th class="py-3.5 px-6 text-center">Porción (40 g)</th>
+                                    <th class="py-3.5 px-6 text-center">Por 100 g</th>
+                                    <th class="py-3.5 px-6 text-right">% VRN Diario (12-17 años)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-stone-800/60">
+                                <tr class="hover:bg-stone-900/40">
+                                    <td class="py-3 px-6 font-semibold text-white">Calorías / Energía</td>
+                                    <td class="py-3 px-6 text-center font-bold text-brand-gold">148.0 kcal</td>
+                                    <td class="py-3 px-6 text-center">370.0 kcal</td>
+                                    <td class="py-3 px-6 text-right font-semibold">6.2%</td>
+                                </tr>
+                                <tr class="hover:bg-stone-900/40">
+                                    <td class="py-3 px-6 font-semibold text-white">Carbohidratos complejos</td>
+                                    <td class="py-3 px-6 text-center">28.4 g</td>
+                                    <td class="py-3 px-6 text-center">71.0 g</td>
+                                    <td class="py-3 px-6 text-right font-semibold">9.5%</td>
+                                </tr>
+                                <tr class="hover:bg-stone-900/40">
+                                    <td class="py-3 px-6 font-semibold text-white">Proteína vegetal (Kiwicha/Avena)</td>
+                                    <td class="py-3 px-6 text-center">3.8 g</td>
+                                    <td class="py-3 px-6 text-center">9.5 g</td>
+                                    <td class="py-3 px-6 text-right font-semibold">7.6%</td>
+                                </tr>
+                                <tr class="hover:bg-stone-900/40">
+                                    <td class="py-3 px-6 font-semibold text-white">Grasas saludables</td>
+                                    <td class="py-3 px-6 text-center">2.4 g</td>
+                                    <td class="py-3 px-6 text-center">6.0 g</td>
+                                    <td class="py-3 px-6 text-right font-semibold">3.7%</td>
+                                </tr>
+                                <tr class="hover:bg-stone-900/40">
+                                    <td class="py-3 px-6 font-semibold text-white">Fibra dietética</td>
+                                    <td class="py-3 px-6 text-center font-bold text-emerald-400">3.5 g</td>
+                                    <td class="py-3 px-6 text-center">8.75 g</td>
+                                    <td class="py-3 px-6 text-right font-bold text-emerald-400">14.0%</td>
+                                </tr>
+                                <tr class="hover:bg-stone-900/40 bg-teal-950/20">
+                                    <td class="py-3.5 px-6 font-bold text-teal-300">Vitamina C (Aguaymanto)</td>
+                                    <td class="py-3.5 px-6 text-center font-extrabold text-teal-300">45.0 mg</td>
+                                    <td class="py-3.5 px-6 text-center text-teal-200">112.5 mg</td>
+                                    <td class="py-3.5 px-6 text-right font-extrabold text-teal-300">75.0% (Alto)</td>
+                                </tr>
+                                <tr class="hover:bg-stone-900/40 bg-amber-950/20">
+                                    <td class="py-3.5 px-6 font-bold text-amber-300">Hierro vegetal (Kiwicha Pop)</td>
+                                    <td class="py-3.5 px-6 text-center font-extrabold text-amber-300">3.2 mg</td>
+                                    <td class="py-3.5 px-6 text-center text-amber-200">8.0 mg</td>
+                                    <td class="py-3.5 px-6 text-right font-extrabold text-amber-300">22.8% (Biodisponible)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Allergen & Inocuity Card -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="p-6 rounded-3xl bg-brand-cardDark border border-brand-borderDark space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center">
+                                <i data-lucide="shield-alert" class="w-5 h-5 text-teal-400"></i>
+                            </div>
+                            <h4 class="font-display font-bold text-lg text-white">Declaración de Alérgenos & BPM</h4>
+                        </div>
+                        
+                        <p class="text-xs text-stone-300 leading-relaxed">
+                            Producido bajo estrictas Buenas Prácticas de Manufactura (BPM). Libre de colorantes y aromatizantes artificiales.
+                        </p>
+
+                        <div class="space-y-2 pt-2 text-xs">
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-900/70 border border-stone-800">
+                                <span class="text-stone-400">Gluten:</span>
+                                <span class="text-emerald-400 font-bold">No contiene ingredientes con gluten</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-900/70 border border-stone-800">
+                                <span class="text-stone-400">Lácteos / Lactosa:</span>
+                                <span class="text-emerald-400 font-bold">100% Libre de lácteos</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-900/70 border border-stone-800">
+                                <span class="text-stone-400">Actividad de Agua (Aw):</span>
+                                <span class="text-brand-sun font-bold">&lt; 0.60 (Inhibe bacterias)</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-900/70 border border-stone-800">
+                                <span class="text-stone-400">Vida útil garantizada:</span>
+                                <span class="text-white font-bold">90 días a temp. ambiente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. STORYTELLING & PROPÓSITO REGIONAL (OATLY STYLE) -->
+    <section class="py-24 relative overflow-hidden bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-gold text-xs font-extrabold tracking-widest uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20 font-mono">
+                        Nacidos en el COAR Amazonas
+                    </span>
+                    <h2 class="font-display font-black text-3xl sm:text-5xl text-white leading-tight">
+                        De Lámud para el Perú: Un Snack con Identidad y Futuro.
+                    </h2>
+                    <p class="text-stone-300 text-base leading-relaxed">
+                        Somos 5 estudiantes del <strong>COAR Amazonas</strong> que vivimos en carne propia la fatiga de estudiar hasta altas horas y la falta de opciones nutritivas en los quioscos. 
+                    </p>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        En lugar de aceptar snacks ultraprocesados, decidimos aliarnos con los agricultores de plátano verde y aguaymanto de la provincia de Luya para crear una cadena productiva corta, justa y con impacto social medible.
+                    </p>
+
+                    <!-- Circular Economy Highlight -->
+                    <div class="p-6 rounded-2xl bg-brand-cardDark border border-teal-500/30 space-y-2">
+                        <div class="flex items-center gap-2 text-teal-400 font-display font-bold text-base">
+                            <i data-lucide="recycle" class="w-5 h-5"></i>
+                            Proyección a Empaques de Mucílago de Yuca
+                        </div>
+                        <p class="text-xs text-stone-300">
+                            Investigamos el uso de biopolímeros biodegradables a base de almidón y mucílago de yuca para reemplazar el plástico convencional, logrando que el empaque se biodegrade en menos de 180 días.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="p-8 rounded-3xl glass-panel border border-brand-borderDark space-y-6">
+                        <h3 class="font-display font-bold text-2xl text-white flex items-center gap-2">
+                            <i data-lucide="users" class="w-6 h-6 text-brand-gold"></i>
+                            El Equipo Fundador
+                        </h3>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4">
+<div class="p-3.5 rounded-xl bg-stone-900/80 border border-stone-800">
+                                <p class="font-bold text-white text-sm">Aharon Vega Carrasco</p>
+                                <p class="text-xs text-brand-gold font-mono font-bold">Líder del Proyecto</p>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-stone-900/80 border border-stone-800">
+                                <p class="font-bold text-white text-sm">Vashell Ramirez Vasquez</p>
+                                <p class="text-xs text-teal-400 font-mono font-bold">Investigadora</p>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-stone-900/80 border border-stone-800">
+                                <p class="font-bold text-white text-sm">Franklin Mosqueda Diaz</p>
+                                <p class="text-xs text-orange-400 font-mono font-bold">Creador & Prototipado</p>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-stone-900/80 border border-stone-800">
+                                <p class="font-bold text-white text-sm">Emerson Villanueva Risco</p>
+                                <p class="text-xs text-emerald-400 font-mono font-bold">Diseñador de Marca</p>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-stone-900/80 border border-stone-800 sm:col-span-2">
+                                <p class="font-bold text-white text-sm">Adriana Santillan Rodriguez</p>
+                                <p class="text-xs text-yellow-400 font-mono font-bold">Evaluadora Sensorial</p>
+                            </div>
+                        </div>
+<p class="text-xs text-stone-400 text-center pt-2 border-t border-stone-800">
+                            Asesor Pedagógico: <strong class="text-stone-200">Prof. James Padilla Guevara</strong>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRUEBA SOCIAL (REVIEWS & VALIDACIÓN) -->
+    <section id="reviews" class="py-24 bg-stone-900/40 border-y border-brand-borderDark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-gold text-xs font-extrabold tracking-widest uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20 font-mono">
+                    Validación con Consumidores Reales
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-5xl text-white">
+                    4.8 de 5 Estrellas en Pruebas a Ciegas
+                </h2>
+                <div class="flex items-center justify-center gap-1 text-amber-400 text-lg">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <span class="text-stone-400 text-sm font-semibold ml-2">(50 Evaluadores en Lámud y COAR)</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="p-7 rounded-3xl bg-brand-cardDark border border-brand-borderDark space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm">★★★★★</div>
+                        <p class="text-stone-300 text-sm italic leading-relaxed">
+                            "Pensé que iba a saber a harina cruda, pero el sabor del aguaymanto con la kiwicha tostada es adictivo. Me la comí antes de la clase de física y no me dio sueño en toda la tarde."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-800">
+                        <p class="font-display font-bold text-white text-sm">Mateo C.</p>
+                        <p class="text-xs text-stone-500">Estudiante de 4to Secundaria (15 años) • Lámud</p>
+                    </div>
+                </div>
+
+                <div class="p-7 rounded-3xl bg-brand-cardDark border border-brand-borderDark space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm">★★★★★</div>
+                        <p class="text-stone-300 text-sm italic leading-relaxed">
+                            "Como mamá me encanta que no tenga octógonos ni azúcar blanca. Por S/ 2.50 prefiero mil veces comprarle esto para su lonchera que unas galletas con grasa."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-800">
+                        <p class="font-display font-bold text-white text-sm">Sra. Rosa Guevara</p>
+                        <p class="text-xs text-stone-500">Madre de familia • Luya, Amazonas</p>
+                    </div>
+                </div>
+
+                <div class="p-7 rounded-3xl bg-brand-cardDark border border-brand-borderDark space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm">★★★★★</div>
+                        <p class="text-stone-300 text-sm italic leading-relaxed">
+                            "El lote piloto de 100 barras se agotó en dos días en el quiosco escolar. Los alumnos regresaron a pedir más por el sabor crujiente."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-800">
+                        <p class="font-display font-bold text-white text-sm">Responsable Quiosco COAR</p>
+                        <p class="text-xs text-stone-500">Punto de Venta Piloto • Lámud</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. STORE LOCATOR (PUNTOS DE VENTA FÍSICOS) -->
+    <section id="store-locator" class="py-24 relative overflow-hidden bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-gold text-xs font-extrabold tracking-widest uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20 font-mono">
+                    Disponibilidad Inmediata
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-5xl text-white">
+                    Encuentra Inti Bar Cerca de Ti
+                </h2>
+                <p class="text-stone-400 text-base">
+                    Puntos autorizados donde puedes conseguir tus barras frescas o pedir entregas por lote.
+                </p>
+            </div>
+
+            <!-- Store Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+                
+                <!-- Punto 1 -->
+                <div class="p-6 rounded-3xl bg-brand-cardDark border border-brand-borderDark hover:border-brand-gold/50 transition-all space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-brand-gold">
+                        <i data-lucide="store" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white">Quiosco Central COAR Amazonas</h3>
+                    <p class="text-xs text-brand-gold font-mono">Lámud • Luya</p>
+                    <p class="text-xs text-stone-400">Atención en horario de recreo escolar (10:30 am - 3:30 pm).</p>
+                    <span class="inline-block text-[11px] font-bold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30">
+                        ● Stock Disponible
+                    </span>
+                </div>
+
+                <!-- Punto 2 -->
+                <div class="p-6 rounded-3xl bg-brand-cardDark border border-brand-borderDark hover:border-brand-gold/50 transition-all space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white">Bodega San Jerónimo</h3>
+                    <p class="text-xs text-teal-400 font-mono">Plaza de Armas de Lámud</p>
+                    <p class="text-xs text-stone-400">Venta unitaria y multipacks familiares de 10 barras.</p>
+                    <span class="inline-block text-[11px] font-bold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30">
+                        ● Stock Disponible
+                    </span>
+                </div>
+
+                <!-- Punto 3: Pedidos Especiales -->
+                <div class="p-6 rounded-3xl bg-brand-cardDark border border-brand-borderDark hover:border-orange-500/50 transition-all space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400">
+                        <i data-lucide="truck" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white">Entregas Chachapoyas / Luya</h3>
+                    <p class="text-xs text-orange-400 font-mono">Envíos por Lotes a I.E. y Colegios</p>
+                    <p class="text-xs text-stone-400">Coordinación directa de pedidos escolares mayores a 20 unidades.</p>
+                    <span class="inline-block text-[11px] font-bold text-amber-300 bg-amber-950/80 px-2.5 py-1 rounded-lg border border-amber-500/30">
+                        ● Pedido Previsto
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. CONVERSIÓN E-COMMERCE: MULTIPACKS & CHECKOUT WHATSAPP -->
+    <section id="comprar" class="py-24 relative gradient-glow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-gold text-xs font-extrabold tracking-widest uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20 font-mono">
+                    Tienda en Línea Oficial
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-5xl text-white">
+                    Elige tu Pack y Pídelo por WhatsApp
+                </h2>
+                <p class="text-stone-400 text-base">
+                    Precios escolares accesibles con entrega coordinada en Lámud, COAR Amazonas y envíos provinciales.
+                </p>
+            </div>
+
+            <!-- Packs Grid -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                
+                <!-- Pack 1: Individual -->
+                <div class="rounded-3xl p-7 bg-brand-cardDark border border-brand-borderDark flex flex-col justify-between hover:border-brand-gold/50 transition-all space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-xs text-stone-400 font-mono uppercase font-bold">Unidad Individual</span>
+                        <h3 class="font-display font-extrabold text-2xl text-white">1 Barra Inti Bar</h3>
+                        <p class="text-xs text-stone-400">Recarga de energía para el recreo de 40 g.</p>
+                        <div class="pt-2">
+                            <span class="text-3xl font-display font-black text-white">S/ 2.50</span>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-stone-300 space-y-2.5 pt-4 border-t border-stone-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold"></i> 1 barra funcional de 40 g</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold"></i> Empaque hermético con abre-fácil</li>
+                    </ul>
+                    <button onclick="selectPack('1 Barra Individual (S/ 2.50)', 2.50)" class="w-full py-3.5 rounded-2xl bg-stone-800 hover:bg-brand-gold hover:text-brand-dark text-white font-bold text-xs transition-all font-display">
+                        Elegir 1 Barra
+                    </button>
+                </div>
+
+                <!-- Pack 2: Escolar (Destacado) -->
+                <div class="rounded-3xl p-8 glass-panel border-2 border-brand-gold flex flex-col justify-between relative shadow-2xl shadow-amber-500/15 space-y-6 transform md:-translate-y-3">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full gradient-gold text-brand-dark font-display font-black text-[11px] uppercase tracking-wider shadow-md">
+                        ⭐ Más Vendido • Semana Completa
+                    </div>
+                    <div class="space-y-3 pt-2">
+                        <!-- Retail Box Image Mockup -->
+                        <div class="rounded-2xl overflow-hidden border border-brand-gold/40 mb-3 shadow-lg">
+                            <img src="https://i.imgur.com/lBb2BWv.jpg" alt="Inti Bar - Caja Retail Pack 5 Barras" class="w-full h-44 object-cover img-zoom">
+                        </div>
+                        <span class="text-xs text-brand-sun font-mono uppercase font-bold">Pack Escolar (Lunes a Viernes)</span>
+                        <h3 class="font-display font-extrabold text-3xl text-white">Caja 5 Barras</h3>
+                        <p class="text-xs text-stone-300">Una barra diaria para rendir al 100% en clases.</p>
+                        <div class="pt-2 flex items-baseline gap-2">
+                            <span class="text-4xl font-display font-black text-brand-sun">S/ 11.50</span>
+                            <span class="text-xs text-stone-400 line-through">S/ 12.50</span>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-stone-200 space-y-2.5 pt-4 border-t border-stone-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold"></i> 5 barras de 40 g (Ahorro de S/ 1.00)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold"></i> Mensajes de motivación escritos a mano</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-gold"></i> 1 sello para la tarjeta Inti Club</li>
+                    </ul>
+                    <button onclick="selectPack('Pack Escolar Semanal de 5 Barras (S/ 11.50)', 11.50)" class="w-full py-4 rounded-2xl gradient-gold text-brand-dark font-display font-black text-sm shadow-xl shadow-amber-500/25 hover:opacity-95 transition-all">
+                        Pedir Pack Escolar (S/ 11.50)
+                    </button>
+                </div>
+
+                <!-- Pack 3: Familiar -->
+                <div class="rounded-3xl p-7 bg-brand-cardDark border border-brand-borderDark flex flex-col justify-between hover:border-brand-gold/50 transition-all space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-xs text-stone-400 font-mono uppercase font-bold">Pack Familiar / Amigos</span>
+                        <h3 class="font-display font-extrabold text-2xl text-white">Caja 10 Barras</h3>
+                        <p class="text-xs text-stone-400">Máximo ahorro para grupos o consumo quincenal.</p>
+                        <div class="pt-2 flex items-baseline gap-2">
+                            <span class="text-3xl font-display font-black text-white">S/ 22.00</span>
+                            <span class="text-xs text-stone-400 line-through">S/ 25.00</span>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-stone-300 space-y-2.5 pt-4 border-t border-stone-800">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> 10 barras de 40 g (Ahorro de S/ 3.00)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> Entrega preferencial directa</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-400"></i> 2 sellos Inti Club</li>
+                    </ul>
+                    <button onclick="selectPack('Pack Familiar de 10 Barras (S/ 22.00)', 22.00)" class="w-full py-3.5 rounded-2xl bg-stone-800 hover:bg-brand-gold hover:text-brand-dark text-white font-bold text-xs transition-all font-display">
+                        Elegir Pack Familiar
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- WhatsApp Instant Checkout Form -->
+            <div class="max-w-2xl mx-auto rounded-3xl p-8 bg-stone-950 border border-brand-gold/30 shadow-2xl">
+                <h3 class="font-display font-bold text-xl text-white mb-4 flex items-center gap-2">
+                    <i data-lucide="send" class="w-5 h-5 text-brand-gold"></i>
+                    Completa tu Pedido Express
+                </h3>
+
+                <div class="space-y-4">
+                    <div>
+                        <label for="selectedPackInput" class="block text-xs font-semibold text-stone-300 mb-1.5">Pack Seleccionado:</label>
+                        <input id="selectedPackInput" type="text" readonly value="Pack Escolar Semanal de 5 Barras (S/ 11.50)" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-4 py-3 text-sm text-brand-sun font-display font-bold focus:outline-none">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="userNameInput" class="block text-xs font-semibold text-stone-300 mb-1.5">Tu Nombre y Apellido:</label>
+                            <input id="userNameInput" type="text" placeholder="Ej: Cesia Roxana Muñoz Noriega" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold">
+                        </div>
+                        <div>
+                            <label for="userLocationInput" class="block text-xs font-semibold text-stone-300 mb-1.5">Lugar de Entrega / Grado:</label>
+                            <input id="userLocationInput" type="text" placeholder="Ej: COAR Amazonas / Lámud" class="w-full bg-stone-900 border border-stone-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold">
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="sendWhatsAppOrder()" class="w-full py-4 rounded-2xl gradient-gold text-brand-dark font-display font-black text-base flex items-center justify-center gap-3 shadow-xl shadow-amber-500/25 hover:opacity-95 transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Enviar Pedido Directo a WhatsApp (+51 914 967 872)</span>
+                        </button>
+                        <p class="text-center text-[11px] text-stone-400 mt-2.5">
+                            💳 Aceptamos Yape, Plin y Pago contraentrega en efectivo al recibir tus barras.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-stone-950 border-t border-brand-borderDark text-stone-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-xl gradient-gold flex items-center justify-center text-brand-dark font-black text-xs">
+                    <i data-lucide="sun" class="w-4 h-4"></i>
+                </div>
+                <div>
+                    <span class="font-display font-black text-sm text-white">INTI BAR</span>
+                    <p class="text-[10px] text-stone-400">Energía Ancestral para la Generación del Futuro</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="https://www.instagram.com/intibar_17" target="_blank" class="hover:text-brand-gold flex items-center gap-1.5 transition-colors font-semibold">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                    <span>@intibar_17</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1_intibar_entrevistas_empatizar_cye2026/view?usp=sharing" target="_blank" class="hover:text-brand-gold flex items-center gap-1.5 transition-colors font-semibold">
+                    <i data-lucide="folder" class="w-4 h-4"></i>
+                    <span>Portafolio CyE 2026</span>
+                </a>
+            </div>
+
+            <p class="text-stone-400 text-center sm:text-right font-mono text-[11px]">
+                COAR Amazonas • Lámud, Luya, Amazonas • 2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Init Lucide
+        lucide.createIcons();
+
+        function selectPack(packName, price) {
+            document.getElementById('selectedPackInput').value = packName;
+            document.getElementById('comprar').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sendWhatsAppOrder() {
+            const pack = document.getElementById('selectedPackInput').value;
+            const name = document.getElementById('userNameInput').value.trim() || 'Cliente';
+            const location = document.getElementById('userLocationInput').value.trim() || 'COAR Amazonas / Lámud';
+
+            const message = `¡Hola equipo Inti Bar! 👋☀️\n\nMi nombre es *${name}* (${location}).\nQuiero realizar un pedido de:\n🛒 *${pack}*\n\n¿Me confirman la disponibilidad y el número para abonar por Yape/Plin? ¡Muchas gracias!`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            const phoneNumber = "51914967872";
+            const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
