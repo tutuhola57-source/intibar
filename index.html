@@ -205,14 +205,14 @@
                         </div>
 
                         <!-- Real Macro Photography Container (Appetite Appeal) -->
-                        <div class="relative rounded-2xl overflow-hidden border border-brand-borderDark group">
+                        <div class="relative rounded-2xl overflow-hidden border border-brand-borderDark group shadow-2xl">
                             <!-- Hero Food Image -->
                             <img id="mainProductImg" 
-                                 src="https://i.imgur.com/iNyOAZR.jpg" 
-                                 alt="Inti Bar - Barra funcional de superalimentos con aguaymanto y kiwicha pop" 
-                                 class="w-full h-72 object-cover img-zoom">
+                                 src="img/empaque_oficial_40g.jpg" 
+                                 alt="Inti Bar - Empaque Oficial Frente y Reverso 40g" 
+                                 class="w-full h-80 object-cover img-zoom">
                             
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-75"></div>
                             
                             <!-- Overlay Content on Image -->
                             <div class="absolute bottom-4 left-4 right-4 z-10">
@@ -226,6 +226,19 @@
                                     </span>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- Miniatura Switcher para alternar vistas oficiales -->
+                        <div class="grid grid-cols-3 gap-2 mt-3">
+                            <button type="button" onclick="document.getElementById('mainProductImg').src='img/empaque_oficial_40g.jpg'" class="py-2 px-2 rounded-xl bg-stone-900/90 border border-brand-gold/40 text-[11px] font-bold text-brand-gold hover:bg-stone-800 transition-all flex items-center justify-center gap-1">
+                                <i data-lucide="package" class="w-3.5 h-3.5"></i> Empaque 40g
+                            </button>
+                            <button type="button" onclick="document.getElementById('mainProductImg').src='img/barra_muestra_fisica.png'" class="py-2 px-2 rounded-xl bg-stone-900/90 border border-stone-800 text-[11px] font-bold text-stone-300 hover:text-white hover:bg-stone-800 transition-all flex items-center justify-center gap-1">
+                                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Barra Real
+                            </button>
+                            <button type="button" onclick="document.getElementById('mainProductImg').src='img/identidad_kraft_solar.jpg'" class="py-2 px-2 rounded-xl bg-stone-900/90 border border-stone-800 text-[11px] font-bold text-stone-300 hover:text-white hover:bg-stone-800 transition-all flex items-center justify-center gap-1">
+                                <i data-lucide="sun" class="w-3.5 h-3.5"></i> Kraft Solar
+                            </button>
                         </div>
 
                         <!-- Sensory Highlights Quick Metrics -->
@@ -758,6 +771,9 @@
                 <!-- Pack 1: Individual -->
                 <div class="rounded-3xl p-7 bg-brand-cardDark border border-brand-borderDark flex flex-col justify-between hover:border-brand-gold/50 transition-all space-y-6">
                     <div class="space-y-3">
+                        <div class="rounded-2xl overflow-hidden border border-brand-borderDark mb-3 shadow-md">
+                            <img src="img/empaque_oficial_40g.jpg" alt="Inti Bar - 1 Barra Individual 40g" class="w-full h-44 object-cover img-zoom">
+                        </div>
                         <span class="text-xs text-stone-400 font-mono uppercase font-bold">Unidad Individual</span>
                         <h3 class="font-display font-extrabold text-2xl text-white">1 Barra Inti Bar</h3>
                         <p class="text-xs text-stone-400">Recarga de energía para el recreo de 40 g.</p>
@@ -782,7 +798,7 @@
                     <div class="space-y-3 pt-2">
                         <!-- Retail Box Image Mockup -->
                         <div class="rounded-2xl overflow-hidden border border-brand-gold/40 mb-3 shadow-lg">
-                            <img src="https://i.imgur.com/lBb2BWv.jpg" alt="Inti Bar - Caja Retail Pack 5 Barras" class="w-full h-44 object-cover img-zoom">
+                            <img src="img/identidad_kraft_solar.jpg" alt="Inti Bar - Presentación Kraft Solar Pack 5 Barras" class="w-full h-44 object-cover img-zoom">
                         </div>
                         <span class="text-xs text-brand-sun font-mono uppercase font-bold">Pack Escolar (Lunes a Viernes)</span>
                         <h3 class="font-display font-extrabold text-3xl text-white">Caja 5 Barras</h3>
@@ -805,6 +821,9 @@
                 <!-- Pack 3: Familiar -->
                 <div class="rounded-3xl p-7 bg-brand-cardDark border border-brand-borderDark flex flex-col justify-between hover:border-brand-gold/50 transition-all space-y-6">
                     <div class="space-y-3">
+                        <div class="rounded-2xl overflow-hidden border border-brand-borderDark mb-3 shadow-md">
+                            <img src="img/campana_lanzamiento.jpg" alt="Inti Bar - Campaña Oficial Pack Familiar" class="w-full h-44 object-cover img-zoom">
+                        </div>
                         <span class="text-xs text-stone-400 font-mono uppercase font-bold">Pack Familiar / Amigos</span>
                         <h3 class="font-display font-extrabold text-2xl text-white">Caja 10 Barras</h3>
                         <p class="text-xs text-stone-400">Máximo ahorro para grupos o consumo quincenal.</p>
